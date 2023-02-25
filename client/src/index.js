@@ -6,9 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { BrowserRouter } from "react-router-dom";
+import { SnackbarProvider } from 'notistack';
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <SnackbarProvider maxSnack={3}>
+      <App />
+    </SnackbarProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

@@ -3,15 +3,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import PeopleIcon from '@mui/icons-material/People';
-import FmdGoodIcon from '@mui/icons-material/FmdGood';
-import CampaignIcon from '@mui/icons-material/Campaign';
-import EventIcon from '@mui/icons-material/Event';
-import ScheduleIcon from '@mui/icons-material/Schedule';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import DeleteIcon from '@mui/icons-material/Delete';
-import AssessmentIcon from '@mui/icons-material/Assessment';
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+import PersonIcon from '@mui/icons-material/Person';
+import ReceiptIcon from '@mui/icons-material/Receipt';
+import ReportIcon from '@mui/icons-material/Report';
 import Typography from "@mui/material/Typography";
+import ListAltIcon from '@mui/icons-material/ListAlt';
 import { useNavigate } from 'react-router-dom';
 
 export const mainListItems = (
@@ -25,28 +22,35 @@ export const mainListItems = (
 
     <ListItem component="a" href="/employees">
       <ListItemIcon style={{ color: 'white' }}>
-        <PeopleIcon />
+        <SupervisorAccountIcon />
       </ListItemIcon>
       <ListItemText primary={<Typography style={{ color: 'white' }}>Employees</Typography>} />
     </ListItem>
 
     <ListItem component="a" href="/customers">
       <ListItemIcon style={{ color: 'white' }}>
-        <PeopleIcon />
+        <PersonIcon />
       </ListItemIcon>
       <ListItemText primary={<Typography style={{ color: 'white' }}>Customers</Typography>} />
     </ListItem>
 
+    <ListItem component="a" href="/transactions">
+      <ListItemIcon style={{ color: 'white' }}>
+        <ReceiptIcon />
+      </ListItemIcon>
+      <ListItemText primary={<Typography style={{ color: 'white' }}>Transactions</Typography>} />
+    </ListItem>
+
     <ListItem component="a" href="/reports">
       <ListItemIcon style={{ color: 'white' }}>
-        <AssessmentIcon />
+        <ListAltIcon />
       </ListItemIcon>
-      <ListItemText primary={<Typography style={{ color: 'white' }}>Reports</Typography>} />
+      <ListItemText primary={<Typography style={{ color: 'white' }}>Orders</Typography>} />
     </ListItem>
 
     <ListItem component="a" href="/concerns">
       <ListItemIcon style={{ color: 'white' }}>
-        <AssessmentIcon />
+        <ReportIcon />
       </ListItemIcon>
       <ListItemText primary={<Typography style={{ color: 'white' }}>Concerns</Typography>} />
     </ListItem>

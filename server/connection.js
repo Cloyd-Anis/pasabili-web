@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
+require('dotenv').config('./.env');
 
 const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME, DB_DIALECT} = process.env;
 
@@ -24,4 +24,4 @@ try{
     console.log(err);
 }
 
-module.exports = sequelize;
+exports.sequelize = sequelize;

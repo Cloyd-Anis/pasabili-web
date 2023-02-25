@@ -1,5 +1,6 @@
 const {DataTypes} = require('sequelize');
 const instance = require('../connection');
+const address = require('./address').model;
 
 const admin = instance.sequelize.define("admins",{
     admin_id:{
@@ -56,4 +57,9 @@ const admin = instance.sequelize.define("admins",{
     tableName: "admins"
 }
 );
+
+// Define association between "admins" and "addresses"
+admin.belongsTo(address, { foreignKey: 'address_id', as: 'adminAddress' }); // Adds "address_id" column to "admins" table
+address.hasOne(admin, { foreignKey: 'address_id' }); // Adds "address_id" column to "addresses" table
+
 exports.model = admin;
