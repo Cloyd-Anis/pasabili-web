@@ -77,7 +77,7 @@ const EmployeesPage = () => {
   return (
     <PageLayout headerTitle={"Employees"}>
       <Helmet>
-        <title>GTrack | Employees</title>
+        <title>Pasabili | Employees</title>
       </Helmet>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         

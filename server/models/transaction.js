@@ -1,5 +1,6 @@
 const {DataTypes} = require('sequelize');
 const instance = require('../connection');
+const order = require('./order').model;
 
 const transaction = instance.sequelize.define("transactions",{
     transaction_id:{
@@ -26,9 +27,13 @@ const transaction = instance.sequelize.define("transactions",{
     }
 },{
     createdAt: true,
+    updatedAt:true,
     deletedAt: true,
     tableName: "transactions"
 }
 
 );
+// Define association between "transaction" and "order"
+transaction.belongsTo(order, {foreignKey: 'order_id', as: 'transactionOrders'});
+order.hasMany(transaction, {foreignKey: 'order_id' }); 
 exports.model = transaction;

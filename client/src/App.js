@@ -4,6 +4,7 @@ import EmployeesPage from "./pages/EmployeesPage";
 import './App.css';
 import LoginPage from "./pages/LoginPage";
 import CustomersPage from "./pages/CustomersPage";
+import TransactionsPage from "./pages/TransactionsPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
        <Route path="/dashboard" element={<DashboardPage/>} />
        <Route path="/employees" element={<EmployeesPage/>} />
        <Route path="/customers" element={<CustomersPage/>} />
+       <Route path="/transactions" element={<TransactionsPage/>} />
       </Routes>
     </div>
   );

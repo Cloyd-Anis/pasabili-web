@@ -74,9 +74,9 @@ const CustomersPage = () => {
       value: PropTypes.number.isRequired,
     };
   return (
-    <PageLayout headerTitle={"Employees"}>
+    <PageLayout headerTitle={"Customers"}>
       <Helmet>
-        <title>Pasabili | Employees</title>
+        <title>Pasabili | Customers</title>
       </Helmet>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         

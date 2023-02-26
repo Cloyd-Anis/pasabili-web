@@ -182,7 +182,7 @@ const ItinerantsComponent = () => {
   return (
     <div>
       <ViewEmployeeModal data={rowData} title =" View Employee Details" openModal={openViewModal} setOpenModal={setOpenViewModal} handleCloseModal={() => setOpenViewModal(false)} />
-      <DeleteEmployeeModal data={rowData} title = "Are you sure you want to Deactivate this Employee Record?" openDeleteModal={openDeleteModal} setDeleteModal={setDeleteModal} />
+      <DeleteEmployeeModal data={rowData} title = "Are you sure you want to Deactivate this Employee Record?" module={"employees"} openDeleteModal={openDeleteModal} setDeleteModal={setDeleteModal} />
       <ThemeProvider theme={theme}>
         <MUIDataTable
           title={"Itinerants List"}
